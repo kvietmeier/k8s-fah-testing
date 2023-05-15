@@ -18,11 +18,11 @@ spec:
     matchLabels:
       app: fah-cpu
   replicas: 1 # Set number of replicas to run - one replica per node
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 100%
-      maxSurge: 100%
+  #strategy:
+  #  type: RollingUpdate
+  #  rollingUpdate:
+  #    maxUnavailable: 100%
+  #    maxSurge: 100%
   template:
     metadata:
       labels:
