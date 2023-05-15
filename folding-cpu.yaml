@@ -55,7 +55,7 @@ spec:
             - containerPort: 9292
           resources:
             limits:
-              cpu: 3 # How much CPU you wish to donate per node
+              cpu: 5 # How much CPU you wish to donate per node
               memory: 1024Mi
             requests:
               cpu: 3
