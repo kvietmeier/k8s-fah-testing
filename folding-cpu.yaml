@@ -28,16 +28,16 @@ spec:
       labels:
         app: fah-cpu
     spec:
-      affinity:
-        podAntiAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            - labelSelector:
-                matchExpressions:
-                  - key: app
-                    operator: In
-                    values:
-                      - fah-cpu
-              topologyKey: "kubernetes.io/hostname"
+      #affinity:
+      #  podAntiAffinity:
+      #    requiredDuringSchedulingIgnoredDuringExecution:
+      #      - labelSelector:
+      #          matchExpressions:
+      #            - key: app
+      #              operator: In
+      #              values:
+      #                - fah-cpu
+      #        topologyKey: "kubernetes.io/hostname"
       containers:
         - name: fah-cpu
           image: "ghcr.io/richstokes/k8s-fah:master"
@@ -58,7 +58,7 @@ spec:
               cpu: 5 # How much CPU you wish to donate per node
               memory: 1024Mi
             requests:
-              cpu: 3
+              cpu: 1
               memory: 1024Mi
           # Make the container harder to break out of or exploit
           securityContext:
