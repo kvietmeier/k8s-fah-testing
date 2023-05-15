@@ -53,11 +53,11 @@ spec:
             - "--gpu=false"
           resources:
             limits:
-              cpu: 1000m # How much CPU you wish to donate per node
-              memory: 512Mi
+              cpu: 3 # How much CPU you wish to donate per node
+              memory: 1024Mi
             requests:
-              cpu: 100m
-              memory: 512Mi
+              cpu: 3
+              memory: 1024Mi
           # Make the container harder to break out of or exploit
           securityContext:
             runAsNonRoot: true
@@ -112,9 +112,9 @@ data:
       -->
 
       <!-- User Information -->
-      <user value=""/> <!-- Enter your user name here -->
-      <team value=""/>         <!-- Your team number -->
-      <passkey value=""/>       <!-- 32 hexadecimal characters if provided -->
+      <user value="PapaVietmeier"/> <!-- Enter your user name here -->
+      <team value="1064609"/>         <!-- Your team number -->
+      <passkey value="100%Fe2SO4"/>       <!-- 32 hexadecimal characters if provided -->
 
       <power value="full"/>     <!-- Throttling this at K8s level -->
       <gpu value="false"/>      <!-- If true, attempt to autoconfigure GPUs -->
